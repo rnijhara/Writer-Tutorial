@@ -66,7 +66,7 @@ class WordCount(QtGui.QDialog):
         text = self.parent.text.textCursor().selectedText()
 
         # Split the text to get the word count
-        words = str(len(text.split()))
+        words = str(len(text.split(" ")))
 
         # And just get the length of the text for the symbols
         # count
@@ -80,7 +80,7 @@ class WordCount(QtGui.QDialog):
         
         text = self.parent.text.toPlainText()
 
-        words = str(len(text.split()))
+        words = str(len(text.split(" ")))
         symbols = str(len(text))
 
         self.totalWords.setText(words)
